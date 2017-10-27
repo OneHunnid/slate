@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>OME Style Guide</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -198,10 +198,10 @@
     </style>
     <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all.js"></script>
+      <script src="javascripts/all_nosearch.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;scss&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,291 +211,617 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="scss">scss</a>
         </div>
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#general" class="toc-h1 toc-link" data-title="General">General</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Kittens">Get All Kittens</a>
+                    <a href="#grid" class="toc-h2 toc-link" data-title="General">Grid</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Kittens">Get a Specific Kitten</a>
+                    <a href="#colors" class="toc-h2 toc-link" data-title="General">Colors</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Kittens">Delete a Specific Kitten</a>
+                    <a href="#typography" class="toc-h2 toc-link" data-title="General">Typography</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#elements" class="toc-h1 toc-link" data-title="Elements">Elements</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#button-primary" class="toc-h2 toc-link" data-title="Elements">Button - Primary</a>
+                  </li>
+                  <li>
+                    <a href="#button-secondary" class="toc-h2 toc-link" data-title="Elements">Button - Secondary</a>
+                  </li>
+                  <li>
+                    <a href="#button-tertiary" class="toc-h2 toc-link" data-title="Elements">Button - Tertiary</a>
+                  </li>
+                  <li>
+                    <a href="#button-upload" class="toc-h2 toc-link" data-title="Elements">Button - Upload</a>
+                  </li>
+                  <li>
+                    <a href="#button-group" class="toc-h2 toc-link" data-title="Elements">Button Group</a>
+                  </li>
+                  <li>
+                    <a href="#anchor-links" class="toc-h2 toc-link" data-title="Elements">Anchor Links</a>
+                  </li>
+                  <li>
+                    <a href="#input" class="toc-h2 toc-link" data-title="Elements">Input</a>
+                  </li>
+                  <li>
+                    <a href="#dropdown" class="toc-h2 toc-link" data-title="Elements">Dropdown</a>
+                  </li>
+                  <li>
+                    <a href="#checkboxes" class="toc-h2 toc-link" data-title="Elements">Checkboxes</a>
+                  </li>
+                  <li>
+                    <a href="#radio-buttons" class="toc-h2 toc-link" data-title="Elements">Radio Buttons</a>
+                  </li>
+                  <li>
+                    <a href="#labels-amp-descriptions" class="toc-h2 toc-link" data-title="Elements">Labels &amp; Descriptions</a>
+                  </li>
+                  <li>
+                    <a href="#cards" class="toc-h2 toc-link" data-title="Elements">Cards</a>
+                  </li>
+                  <li>
+                    <a href="#icons" class="toc-h2 toc-link" data-title="Elements">Icons</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#components" class="toc-h1 toc-link" data-title="Components">Components</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#header" class="toc-h2 toc-link" data-title="Components">Header</a>
+                  </li>
+                  <li>
+                    <a href="#footer" class="toc-h2 toc-link" data-title="Components">Footer</a>
+                  </li>
+                  <li>
+                    <a href="#indicators" class="toc-h2 toc-link" data-title="Components">Indicators</a>
+                  </li>
+                  <li>
+                    <a href="#application-sections" class="toc-h2 toc-link" data-title="Components">Application Sections</a>
+                  </li>
+                  <li>
+                    <a href="#from-group" class="toc-h2 toc-link" data-title="Components">From Group</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#animations" class="toc-h1 toc-link" data-title="Animations">Animations</a>
           </li>
       </div>
-        <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
-        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+        <h1 id='general'>General</h1>
+<p><img src="images/screenshot.png" alt="alt text" /></p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
-
-<p>The Kittn API uses the following error codes:</p>
+<p>Style guide for the Online Member Enrollment project.</p>
+<h2 id='grid'>Grid</h2>
+<p>The design is based off of a 12 column grid.</p>
 
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Title</th>
+<th>Mobile &gt;599px</th>
+<th>Desktop &lt;600px</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request sucks</td>
+<td>Columns</td>
+<td>1</td>
+<td>12</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong</td>
+<td>Gutters</td>
+<td>0px</td>
+<td>16px (8px on left/right sides. No outside gutters)</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only</td>
+<td>Offset</td>
+<td>Left 56px</td>
+<td>Left 60px</td>
 </tr>
 <tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found</td>
+<td>Max-width</td>
+<td>100%</td>
+<td>720px</td>
 </tr>
 <tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>Margin</td>
+<td>24px 16px</td>
+<td>60px 36px</td>
 </tr>
 </tbody></table>
+<h2 id='colors'>Colors</h2><pre class="highlight scss tab-scss"><code><span class="c1">// Blue
+</span><span class="nv">$b700</span><span class="p">:</span> <span class="mh">#002d5b</span><span class="p">;</span>
+<span class="nv">$b600</span><span class="p">:</span> <span class="mh">#004183</span><span class="p">;</span>
+<span class="nv">$b500</span><span class="p">:</span> <span class="mh">#175da7</span><span class="p">;</span>
+<span class="nv">$b400</span><span class="p">:</span> <span class="mh">#1178ce</span><span class="p">;</span>
+<span class="nv">$b300</span><span class="p">:</span> <span class="mh">#489CEF</span><span class="p">;</span>
 
+<span class="c1">// Red
+</span><span class="nv">$r300</span><span class="p">:</span> <span class="mh">#cd3533</span><span class="m">5</span><span class="p">;</span>
+
+<span class="c1">// Neutral
+</span><span class="nv">$n600</span><span class="p">:</span> <span class="mh">#4a4d56</span><span class="p">;</span>
+<span class="nv">$n400</span><span class="p">:</span> <span class="mh">#a9abb6</span><span class="p">;</span>
+<span class="nv">$n300</span><span class="p">:</span> <span class="mh">#d8dbe2</span><span class="p">;</span>
+<span class="nv">$n200</span><span class="p">:</span> <span class="mh">#eef0f5</span><span class="p">;</span>
+<span class="nv">$n100</span><span class="p">:</span> <span class="mh">#f7f9fb</span><span class="p">;</span>
+
+<span class="c1">// Grayscale
+</span><span class="nv">$g800</span><span class="p">:</span> <span class="mh">#0d0d0d</span><span class="p">;</span>
+<span class="nv">$g700</span><span class="p">:</span> <span class="mh">#373737</span><span class="p">;</span>
+<span class="nv">$g600</span><span class="p">:</span> <span class="mh">#6d6d6d</span><span class="p">;</span>
+<span class="nv">$g400</span><span class="p">:</span> <span class="mh">#cecece</span><span class="p">;</span>
+<span class="nv">$g200</span><span class="p">:</span> <span class="mh">#fafafa</span><span class="p">;</span>
+<span class="nv">$g100</span><span class="p">:</span> <span class="mh">#ffffff</span><span class="p">;</span>
+
+<span class="c1">// Gradients
+</span><span class="nc">.carnegie</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="m">-135deg</span><span class="o">,</span> <span class="nv">$b500</span> <span class="m">0%</span><span class="o">,</span> <span class="nv">$b300</span> <span class="m">100%</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.beacon</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$g100</span><span class="o">,</span>
+  <span class="n">background-image</span><span class="o">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="m">-180deg</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">0</span><span class="mi">.00</span><span class="p">)</span> <span class="m">0%</span><span class="o">,</span> <span class="nv">$b400</span> <span class="m">3%</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<p><img src="images/color.png" alt="alt text" /></p>
+
+<p>The color scheme is organized by Color, Neutral or Gray and from darkest to lightest.</p>
+<h2 id='typography'>Typography</h2><pre class="highlight scss tab-scss"><code>  <span class="nv">$book</span>   <span class="p">:</span> <span class="m">400</span><span class="p">;</span>
+  <span class="nv">$medium</span> <span class="p">:</span> <span class="m">500</span><span class="p">;</span>
+  <span class="nv">$bold</span>   <span class="p">:</span> <span class="m">600</span><span class="p">;</span>
+  <span class="nv">$black</span>  <span class="p">:</span> <span class="m">700</span><span class="p">;</span>
+</code></pre>
+<p>Font Weights</p>
+<h1 id='elements'>Elements</h1><h2 id='button-primary'>Button - Primary</h2><pre class="highlight scss tab-scss"><code><span class="c1">// Primary Button
+</span><span class="nc">.button</span> <span class="p">{</span>  
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$g100</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$b400</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">600</span><span class="p">;</span>
+  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">0</span><span class="mi">.4</span><span class="p">;</span>
+  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">12px</span> <span class="m">24px</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="nv">$b500</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p><img src="images/elements/button-primary.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>These buttons are used for the most important action on the screen.</li>
+<li>There is a hover state</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>Continue button on each application section</li>
+</ul>
+<h2 id='button-secondary'>Button - Secondary</h2><pre class="highlight scss tab-scss"><code><span class="c1">// Secondary Button
+</span><span class="nc">.button</span> <span class="p">{</span>  
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$g800</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$g100</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">600</span><span class="p">;</span>
+  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">0</span><span class="mi">.4</span><span class="p">;</span>
+  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">12px</span> <span class="m">24px</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="nv">$b500</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p><img src="images/elements/button-secondary.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>These buttons are used for the second most important action on the screen.</li>
+<li>There is a hover state</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>Back or Cancel button on each application section</li>
+</ul>
+<h2 id='button-tertiary'>Button - Tertiary</h2><pre class="highlight scss tab-scss"><code><span class="c1">// Tertiary Button
+</span><span class="nc">.button</span> <span class="p">{</span>  
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$g800</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">14px</span> <span class="m">24px</span><span class="p">;</span>
+  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="err">#</span><span class="nv">$n200</span><span class="p">;</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="m">-180deg</span><span class="o">,</span>
+                    <span class="nf">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">0</span><span class="mi">.00</span><span class="p">)</span> <span class="m">0%</span><span class="o">,</span>
+                    <span class="nf">rgba</span><span class="p">(</span><span class="m">216</span><span class="o">,</span><span class="m">219</span><span class="o">,</span><span class="m">226</span><span class="o">,</span><span class="m">0</span><span class="mi">.40</span><span class="p">)</span> <span class="m">100%</span><span class="p">);</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$n400</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="nv">$b500</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p><img src="images/elements/button-tertiary.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>This button type is used for options within the application</li>
+<li>There are three states: Default, Hover and Active</li>
+<li>Default: the button displays in its normal, resting states</li>
+<li>Hover: the border changes color to a darker gray</li>
+<li>Active: the button&#39;s border and background-gradient changes to blue</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>User selects billing address</li>
+<li>User selecting donation amount</li>
+</ul>
+<h2 id='button-upload'>Button - Upload</h2><pre class="highlight scss tab-scss"><code><span class="c1">// Upload Button
+</span><span class="nc">.button</span> <span class="p">{</span>  
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$g100</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$n300</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">600</span><span class="p">;</span>
+  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">0</span><span class="mi">.4</span><span class="p">;</span>
+  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">12px</span> <span class="m">24px</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="nv">$b500</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p><img src="images/elements/button-upload.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>This is the upload button so users can upload documents</li>
+<li>There are several states: Default, Hover, In Progress, Successful</li>
+<li>Default: the normal resting state</li>
+<li>Hover: the border changes to a darker gray</li>
+<li>In Progress: replaces the text with a spinning icons</li>
+<li>Successful: replaces the spinning icon with a checkmark and word &#39;successful&#39;</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>Upload Document in Tax section</li>
+</ul>
+<h2 id='button-group'>Button Group</h2>
+<p><img src="images/elements/continue-and-back.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>This group with a primary and secondary button is separated by 12px</li>
+<li>This group is used at the end of each application section</li>
+<li>Secondary button is first, Primary button is second.</li>
+</ul>
+<h2 id='anchor-links'>Anchor Links</h2><pre class="highlight scss tab-scss"><code><span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$b500</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">500</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+
+  <span class="err">&amp;</span><span class="p">:</span><span class="o">:</span><span class="n">before</span> <span class="p">{</span>
+    <span class="nl">content</span><span class="p">:</span><span class="s1">''</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$b500</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nt">a</span> <span class="nc">.has--icon-add</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$b500</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">500</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">24px</span><span class="p">;</span>
+
+  <span class="err">&amp;</span><span class="p">:</span><span class="o">:</span><span class="n">before</span> <span class="p">{</span>
+    <span class="c1">// svg of + icon
+</span>  <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre>
+<p><img src="images/elements/anchor-links.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>Hover: the text, underline and icon change colors</li>
+<li>Default: contain a bottom border thats 5px below the baseline</li>
+<li>Contains Icon: 8px of space between icon and text, no border on hover</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>Adding an Address in Royalties section</li>
+<li>Links in the Tax section</li>
+</ul>
+<h2 id='input'>Input</h2><pre class="highlight scss tab-scss"><code><span class="nt">input</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$g100</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">12px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">40</span><span class="n">PX</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$n500</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+
+  <span class="err">&amp;</span><span class="p">:</span><span class="o">:</span><span class="n">hover</span> <span class="p">{</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$n600</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="err">&amp;</span><span class="p">:</span><span class="o">:</span><span class="n">active</span> <span class="p">{</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$b400</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">-fail</span> <span class="p">{</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$r300</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">-fail-description</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">11px</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$r300</span><span class="p">;</span>
+    <span class="nl">line-height</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p><img src="images/elements/input.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>Form inputs have a few states: Default, Hover, Active, Fail</li>
+<li>Hover: the border changes colors to a darker gray</li>
+<li>Active: the border changes colors to blue</li>
+<li>Fail: the border changes to red and an error message displays under the input</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>User adding their name, address, tax ID, etc</li>
+</ul>
+<h2 id='dropdown'>Dropdown</h2><pre class="highlight scss tab-scss"><code><span class="nt">dropdown</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$g100</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">12px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$n500</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+
+  <span class="err">&amp;</span><span class="p">:</span><span class="o">:</span><span class="n">hover</span> <span class="p">{</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$n600</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="err">&amp;</span><span class="p">:</span><span class="o">:</span><span class="n">active</span> <span class="p">{</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$b400</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.dropdown-option</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="nv">$n200</span><span class="p">;</span>  
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p><img src="images/elements/dropdown.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>Dropdowns have a few states: Default, Hover, Active, Fail</li>
+<li>Hover: the border changes colors to a darker gray</li>
+<li>Active: the border changes colors to blue and the menu expands showing options</li>
+<li>Fail: the border changes to red and an error message displays under the input</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>Selecting a genre</li>
+</ul>
+<h2 id='checkboxes'>Checkboxes</h2>
+<p><img src="images/elements/checkbox.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>Checkboxes are used when users need to make a selection</li>
+<li>There are two states: Default and Selected</li>
+<li>Default: the box only has an outline and the center is white</li>
+<li>Selected: the box background becomes blue with a white checkmark icon in the center</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>Option to enroll in direct deposit</li>
+</ul>
+<h2 id='radio-buttons'>Radio Buttons</h2>
+<p><img src="images/elements/radiobutton.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>Radio buttons are used when users need to make a single selection out of a couple options</li>
+<li>There are two states: Default and Selected</li>
+<li>Default: the circle only has an outline and the center is white</li>
+<li>Selected: the circles background becomes blue with a white smaller circle in the middle</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>Agree to terms and conditions</li>
+</ul>
+<h2 id='labels-amp-descriptions'>Labels &amp; Descriptions</h2><pre class="highlight scss tab-scss"><code><span class="nc">.label</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="nv">$medium</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$g800</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.description</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="nv">$book</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$g800</span><span class="p">;</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0</span><span class="mi">.74</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<p><img src="images/elements/labeldescription.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>Labels are used to identify a form group, such as asking for a name</li>
+<li>Descriptions are used to give the user context for the form group</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>Asking users for their full name in General Section</li>
+</ul>
+<h2 id='cards'>Cards</h2><pre class="highlight scss tab-scss"><code><span class="nc">.card</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$g200</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">24px</span> <span class="m">18px</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$n300</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nt">-floating</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="nv">$n200</span><span class="p">;</span>
+    <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">2px</span> <span class="m">6px</span> <span class="m">0</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">13</span><span class="o">,</span><span class="m">13</span><span class="o">,</span><span class="m">13</span><span class="o">,</span><span class="m">0</span><span class="mi">.10</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p><img src="images/elements/card.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>Cards are used to identify sections of content</li>
+<li>There are two styles: default and Floating</li>
+<li>Default: used as a way to group content together</li>
+<li>Floating: used to display secondary actions after a primary action has taken place</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>Default: Required documents or account creation Components</li>
+<li>floating: Donation component</li>
+</ul>
+<h2 id='icons'>Icons</h2>
+<p><img src="images/elements/icon.png" alt="alt text" /></p>
+
+<p><strong>Behavior:</strong></p>
+
+<ul>
+<li>Icons are sized depending upon their context</li>
+<li>There are light and dark versions</li>
+<li>Light: the color is $g100</li>
+<li>Dark: the color is $g700</li>
+<li>The icons are taken from the open-source Feathericons.com</li>
+</ul>
+
+<p><strong>Icon List:</strong></p>
+
+<ul>
+<li>Add</li>
+<li>Close</li>
+<li>Checkmark</li>
+<li>Loading</li>
+<li>Triangle</li>
+<li>Upload</li>
+</ul>
+<h1 id='components'>Components</h1><h2 id='header'>Header</h2>
+<p>The header has 64px left/right padding and has a fixed position at the top of the browser window. The logo, titles and help link should be aligned center.</p>
+<h3 id='logo'>Logo</h3>
+<p>Has a width of 104px and is positioned 26px from the top.</p>
+<h3 id='site-title'>Site Title</h3><pre class="highlight scss tab-scss"><code>  <span class="nl">font-size</span><span class="p">:</span> <span class="m">24px</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
+</code></pre><h3 id='application-title'>Application Title</h3>
+<p>The application title should reflect the application the user selects.</p>
+<pre class="highlight scss tab-scss"><code>  <span class="nl">color</span><span class="p">:</span> <span class="nv">$g100</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">600</span><span class="p">;</span>
+  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+</code></pre><h3 id='help-link'>Help Link</h3><pre class="highlight scss tab-scss"><code>  <span class="nl">color</span><span class="p">:</span> <span class="nv">$white</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">500</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+</code></pre><h2 id='footer'>Footer</h2><h2 id='indicators'>Indicators</h2>
+<p><img src="images/components/indicator.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong>
+* ...</p>
+<h2 id='application-sections'>Application Sections</h2>
+<p><img src="images/elements/formgroup.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>A form group is comprised of a label, description and form elements (inputs, dropdowns, etc)</li>
+<li>The spacing between form elements is 14px</li>
+<li>The spacing between the description and first form element is 18px</li>
+<li>The spacing after the form group is 36px on desktop and 24px on mobile</li>
+</ul>
+
+<p><strong>Sections:</strong></p>
+
+<ul>
+<li>Indicators with titles</li>
+<li>Form Groups</li>
+<li>Button Group - Continue and Back buttons</li>
+</ul>
+<h2 id='from-group'>From Group</h2>
+<p><img src="images/elements/formgroup.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>A form group is comprised of a label, description and form elements (inputs, dropdowns, etc)</li>
+<li>The spacing between form elements is 14px</li>
+<li>The spacing between the description and first form element is 18px</li>
+<li>The spacing after the form group is 36px on desktop and 24px on mobile</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>Resident Address in General Section</li>
+</ul>
+<h1 id='animations'>Animations</h1>
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="scss">scss</a>
           </div>
       </div>
     </div>
