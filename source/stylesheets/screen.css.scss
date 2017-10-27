@@ -103,6 +103,9 @@ html, body {
 
   .logo {
     margin-bottom: $logo-margin;
+    max-width: 115px;
+    box-sizing: border-box;
+    margin: 15px;
   }
 
   .search-results {
@@ -157,6 +160,8 @@ html, body {
   .toc-link.active {
     background-color: $nav-active-bg;
     color: $nav-active-text;
+    font-weight: bold;
+    text-decoration: underline;
   }
 
   // this is parent links of the currently selected ToC entry
@@ -353,9 +358,9 @@ html, body {
     padding-bottom: 0.5em;
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    background-color: #fdfdfd;
+    // border-top: 1px solid #ccc;
+    // border-bottom: 1px solid #ccc;
+    background-color: #eee;
   }
 
   h1:first-child, div:first-child + h1 {
@@ -383,9 +388,16 @@ html, body {
 
   h3, h4, h5, h6 {
     @extend %header-font;
-    font-size: 15px;
+    font-size: 13px;
     margin-top: 2.5em;
     margin-bottom: 0.8em;
+    letter-spacing: .5px;
+  }
+
+  h3 {
+    font-size: 15px;
+    background-color: #F7F9FB;
+    padding: 10px 28px;
   }
 
   h4, h5, h6 {
