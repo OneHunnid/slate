@@ -290,6 +290,30 @@
                   <li>
                     <a href="#from-group" class="toc-h2 toc-link" data-title="Components">From Group</a>
                   </li>
+                  <li>
+                    <a href="#tooltips" class="toc-h2 toc-link" data-title="Components">Tooltips</a>
+                  </li>
+                  <li>
+                    <a href="#donation" class="toc-h2 toc-link" data-title="Components">Donation</a>
+                  </li>
+                  <li>
+                    <a href="#payment-summary" class="toc-h2 toc-link" data-title="Components">Payment Summary</a>
+                  </li>
+                  <li>
+                    <a href="#membership-options" class="toc-h2 toc-link" data-title="Components">Membership Options</a>
+                  </li>
+                  <li>
+                    <a href="#direct-deposit" class="toc-h2 toc-link" data-title="Components">Direct Deposit</a>
+                  </li>
+                  <li>
+                    <a href="#create-account" class="toc-h2 toc-link" data-title="Components">Create Account</a>
+                  </li>
+                  <li>
+                    <a href="#required-documents" class="toc-h2 toc-link" data-title="Components">Required Documents</a>
+                  </li>
+                  <li>
+                    <a href="#support-panel" class="toc-h2 toc-link" data-title="Components">Support Panel</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -306,6 +330,8 @@
 <p>Style guide for the Online Member Enrollment project.</p>
 <h2 id='grid'>Grid</h2>
 <p>The design is based off of a 12 column grid.</p>
+
+<p><img src="images/grid.png" alt="alt text" /></p>
 
 <table><thead>
 <tr>
@@ -374,16 +400,21 @@
   <span class="nl">background</span><span class="p">:</span> <span class="nv">$g100</span><span class="o">,</span>
   <span class="n">background-image</span><span class="o">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="m">-180deg</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">0</span><span class="mi">.00</span><span class="p">)</span> <span class="m">0%</span><span class="o">,</span> <span class="nv">$b400</span> <span class="m">3%</span><span class="p">)</span>
 <span class="p">}</span>
-</code></pre>
-<p><img src="images/color.png" alt="alt text" /></p>
 
+<span class="nc">.gershwin</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$g200</span><span class="p">;</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="m">-180deg</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">0</span><span class="mi">.00</span><span class="p">)</span> <span class="m">0%</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">216</span><span class="o">,</span><span class="m">219</span><span class="o">,</span><span class="m">226</span><span class="o">,</span><span class="m">0</span><span class="mi">.40</span><span class="p">)</span> <span class="m">100%</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
 <p>The color scheme is organized by Color, Neutral or Gray and from darkest to lightest.</p>
+
+<p><img src="images/color.png" alt="alt text" /></p>
 <h2 id='typography'>Typography</h2><pre class="highlight scss tab-scss"><code>  <span class="nv">$book</span>   <span class="p">:</span> <span class="m">400</span><span class="p">;</span>
   <span class="nv">$medium</span> <span class="p">:</span> <span class="m">500</span><span class="p">;</span>
   <span class="nv">$bold</span>   <span class="p">:</span> <span class="m">600</span><span class="p">;</span>
   <span class="nv">$black</span>  <span class="p">:</span> <span class="m">700</span><span class="p">;</span>
 </code></pre>
-<p>Font Weights</p>
+<p>The primary typeface used for OME is Circular. The four font weights are book, medium, bold and black.</p>
 <h1 id='elements'>Elements</h1><h2 id='button-primary'>Button - Primary</h2><pre class="highlight scss tab-scss"><code><span class="c1">// Primary Button
 </span><span class="nc">.button</span> <span class="p">{</span>  
   <span class="nl">color</span><span class="p">:</span> <span class="nv">$g100</span><span class="p">;</span>
@@ -406,7 +437,7 @@
 
 <ul>
 <li>These buttons are used for the most important action on the screen.</li>
-<li>There is a hover state</li>
+<li>Hover: background color changes</li>
 </ul>
 
 <p><strong>Example:</strong></p>
@@ -436,7 +467,7 @@
 
 <ul>
 <li>These buttons are used for the second most important action on the screen.</li>
-<li>There is a hover state</li>
+<li>Hover: background color changes</li>
 </ul>
 
 <p><strong>Example:</strong></p>
@@ -515,8 +546,16 @@
 <ul>
 <li>Upload Document in Tax section</li>
 </ul>
-<h2 id='button-group'>Button Group</h2>
-<p><img src="images/elements/continue-and-back.png" alt="alt text" /></p>
+<h2 id='button-group'>Button Group</h2><pre class="highlight scss tab-scss"><code><span class="nc">.button-group</span> <span class="p">{</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">60px</span><span class="p">;</span>
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">36px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.button</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-right</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<p><img src="images/elements/buttongroup.png" alt="alt text" /></p>
 
 <p><strong>Behaviors:</strong></p>
 
@@ -551,7 +590,7 @@
 <span class="p">}</span>
 
 </code></pre>
-<p><img src="images/elements/anchor-links.png" alt="alt text" /></p>
+<p><img src="images/elements/anchorlinks.png" alt="alt text" /></p>
 
 <p><strong>Behaviors:</strong></p>
 
@@ -684,6 +723,7 @@
   <span class="nl">line-height</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
   <span class="nl">font-weight</span><span class="p">:</span> <span class="nv">$medium</span><span class="p">;</span>
   <span class="nl">color</span><span class="p">:</span> <span class="nv">$g800</span><span class="p">;</span>
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nc">.description</span> <span class="p">{</span>
@@ -692,6 +732,7 @@
   <span class="nl">font-weight</span><span class="p">:</span> <span class="nv">$book</span><span class="p">;</span>
   <span class="nl">color</span><span class="p">:</span> <span class="nv">$g800</span><span class="p">;</span>
   <span class="nl">opacity</span><span class="p">:</span> <span class="m">0</span><span class="mi">.74</span><span class="p">;</span>
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 <p><img src="images/elements/labeldescription.png" alt="alt text" /></p>
@@ -701,6 +742,8 @@
 <ul>
 <li>Labels are used to identify a form group, such as asking for a name</li>
 <li>Descriptions are used to give the user context for the form group</li>
+<li>The spacing between the title and description is 1px</li>
+<li>The spacing after the description and first form element is 18px</li>
 </ul>
 
 <p><strong>Example:</strong></p>
@@ -760,43 +803,123 @@
 <li>Triangle</li>
 <li>Upload</li>
 </ul>
-<h1 id='components'>Components</h1><h2 id='header'>Header</h2>
-<p>The header has 64px left/right padding and has a fixed position at the top of the browser window. The logo, titles and help link should be aligned center.</p>
-<h3 id='logo'>Logo</h3>
-<p>Has a width of 104px and is positioned 26px from the top.</p>
-<h3 id='site-title'>Site Title</h3><pre class="highlight scss tab-scss"><code>  <span class="nl">font-size</span><span class="p">:</span> <span class="m">24px</span><span class="p">;</span>
+<h1 id='components'>Components</h1><h2 id='header'>Header</h2><pre class="highlight scss tab-scss"><code><span class="nc">.site-title</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">24px</span><span class="p">;</span>
   <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
-</code></pre><h3 id='application-title'>Application Title</h3>
-<p>The application title should reflect the application the user selects.</p>
-<pre class="highlight scss tab-scss"><code>  <span class="nl">color</span><span class="p">:</span> <span class="nv">$g100</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.app-title</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$g100</span><span class="p">;</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span>
   <span class="nl">font-weight</span><span class="p">:</span> <span class="m">600</span><span class="p">;</span>
   <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
   <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
-</code></pre><h3 id='help-link'>Help Link</h3><pre class="highlight scss tab-scss"><code>  <span class="nl">color</span><span class="p">:</span> <span class="nv">$white</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.looking-for-help</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$white</span><span class="p">;</span>
   <span class="nl">font-weight</span><span class="p">:</span> <span class="m">500</span><span class="p">;</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
-</code></pre><h2 id='footer'>Footer</h2><h2 id='indicators'>Indicators</h2>
-<p><img src="images/components/indicator.png" alt="alt text" /></p>
+<span class="p">}</span>
+</code></pre>
+<p><img src="images/components/header-writer.png" alt="alt text" /></p>
 
-<p><strong>Behaviors:</strong>
-* ...</p>
-<h2 id='application-sections'>Application Sections</h2>
-<p><img src="images/elements/formgroup.png" alt="alt text" /></p>
+<p><strong>Behavior:</strong></p>
+
+<ul>
+<li>The header has 64px left/right padding and has a fixed position at the top of the browser window. The logo, titles and help link should be aligned center.</li>
+<li>Logo: Has a width of 104px and is positioned 26px from the top.</li>
+<li>App Title: The application title should reflect the application the user selects.</li>
+<li>Help Link: Clicking on this displays the Support Panel</li>
+</ul>
+<h2 id='footer'>Footer</h2><pre class="highlight scss tab-scss"><code><span class="nc">.footer</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">24px</span><span class="p">;</span>
+  <span class="nl">border-top</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$n300</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.nav</span> <span class="p">{</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="nv">$medium</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
+  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+  <span class="nl">margin-right</span><span class="p">:</span> <span class="m">24px</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nd">:last-child</span> <span class="p">{</span>
+    <span class="nl">margin-right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.nav-group</span> <span class="p">{</span>
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.social-icon-background</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">32px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">32px</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<p><img src="images/components/footer.png" alt="alt text" /></p>
 
 <p><strong>Behaviors:</strong></p>
 
 <ul>
-<li>A form group is comprised of a label, description and form elements (inputs, dropdowns, etc)</li>
-<li>The spacing between form elements is 14px</li>
-<li>The spacing between the description and first form element is 18px</li>
-<li>The spacing after the form group is 36px on desktop and 24px on mobile</li>
+<li>Footer has 24px paddin with a 1px top border</li>
+<li>Navigation links are separated by 24px padding</li>
+<li>There&#39;s a 16px margin that separates the navigation and social icons</li>
+<li>Social Icons: have a size of 32x32</li>
+<li>Instagram: width of 18px</li>
+<li>Facebook: width of 8px</li>
+<li>Twitter: width of 18px</li>
+</ul>
+<h2 id='indicators'>Indicators</h2><pre class="highlight scss tab-scss"><code><span class="nc">.circle</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">25px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">25px</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$n400</span><span class="p">;</span>
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">6px</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nt">--current</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="nv">$b400</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nt">--completed</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$b600</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.section-title</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$g800</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nt">--inactive</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$n400</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p><img src="images/components/indicator.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>Indicators are used to show the user where they are currently in the application process and the next steps</li>
+<li>Indicator circles change color and icon depending on completion of sections.</li>
+</ul>
+<h2 id='application-sections'>Application Sections</h2>
+<p><img src="images/components/formsection.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>A form section is comprised of a label, description, cards and form elements (inputs, dropdowns, etc)</li>
+<li>The spacing between the form title and first form group is 24px.</li>
+<li>The spacing between the last form group and button groups is 60px</li>
+<li>The spacing between the button groups and next form title is 36px</li>
 </ul>
 
 <p><strong>Sections:</strong></p>
 
 <ul>
-<li>Indicators with titles</li>
+<li>Indicators with section titles</li>
 <li>Form Groups</li>
 <li>Button Group - Continue and Back buttons</li>
 </ul>
@@ -816,6 +939,77 @@
 
 <ul>
 <li>Resident Address in General Section</li>
+</ul>
+<h2 id='tooltips'>Tooltips</h2>
+<p><img src="images/components/tooltip.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>...</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>CVC Tooltip</li>
+<li>Bank Routing/Account Number Tooltip</li>
+</ul>
+<h2 id='donation'>Donation</h2>
+<p><img src="images/components/donation.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>...</li>
+</ul>
+<h2 id='payment-summary'>Payment Summary</h2>
+<p><img src="images/components/paymentsummary.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>...</li>
+</ul>
+<h2 id='membership-options'>Membership Options</h2>
+<p><img src="images/components/membershipoptions.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>...</li>
+</ul>
+<h2 id='direct-deposit'>Direct Deposit</h2>
+<p><img src="images/components/directdeposit.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>...</li>
+</ul>
+<h2 id='create-account'>Create Account</h2>
+<p><img src="images/components/createaccount.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>...</li>
+</ul>
+<h2 id='required-documents'>Required Documents</h2>
+<p><img src="images/components/requireddocuments.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>...</li>
+</ul>
+<h2 id='support-panel'>Support Panel</h2>
+<p><img src="images/components/supportpanel.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>...</li>
 </ul>
 <h1 id='animations'>Animations</h1>
       </div>
