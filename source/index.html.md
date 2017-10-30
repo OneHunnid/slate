@@ -636,12 +636,19 @@ dropdown {
 * Resident Address in General Section
 
 ## Tooltips
+```scss
+.tooltip {
+  padding: 18px;
+  box-shadow: 0 2px 4px 0 rgba(13,13,13,0.40);
+}
+````
 
 ![alt text](/images/components/tooltip.png)
 
 **Behaviors:**
 
-* ...
+* Tooltips appear when someone hovers or clicks on the tooltip icon (circle with ?)
+* Tooltips have 18px padding
 
 **Example:**
 
@@ -654,7 +661,8 @@ dropdown {
 
 **Behaviors:**
 
-* ...
+* The donation component uses the Floating Card style
+* When a user selects the 'other' option, the card expands to display the additional fields (donation amount, Required information)
 
 ## Payment Summary
 
@@ -662,7 +670,7 @@ dropdown {
 
 **Behaviors:**
 
-* ...
+* This displays the application fee and donation amounts then displays the sum.
 
 ## Membership Options
 
@@ -670,7 +678,8 @@ dropdown {
 
 **Behaviors:**
 
-* ...
+* Three options are presented to the user in the Membership Selection section: Writer, Publisher, Both
+* If the user selects publisher or both, a dropdown field appears below where they can select their publisher type
 
 ## Direct Deposit
 
@@ -678,7 +687,8 @@ dropdown {
 
 **Behaviors:**
 
-* ...
+* Direct Deposit component uses the Floating Card styling
+* This only displays once the user checks the checkbox
 
 ## Create Account
 
@@ -686,7 +696,9 @@ dropdown {
 
 **Behaviors:**
 
-* ...
+* Users can check if the username they entered in is available. Depending on outcome, a success/unavailable message displays below the input field
+* When clicking 'check availability', the text changes to the loading icon
+* When a user enters an invalid or non-matching password, an error message displays below the second input for password
 
 ## Required Documents
 
@@ -694,7 +706,9 @@ dropdown {
 
 **Behaviors:**
 
-* ...
+* Required documents will display the sections (A, B, C, D) that are required depending on the users information
+* Users are able to skip this section if they'd like
+* If a user clicks on 'or add comment', the button and link are replaced with a textarea for the user to leave a comment
 
 ## Support Panel
 
