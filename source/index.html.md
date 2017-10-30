@@ -21,6 +21,8 @@ Style guide for the Online Member Enrollment project.
 
 The design is based off of a 12 column grid.
 
+![alt text](/images/grid.png)
+
 Title          | Mobile >599px   | Desktop <600px
 -------------- | -------------- | --------------
 Columns        | 1              | 12
@@ -66,12 +68,15 @@ $g100: #ffffff;
   background: $g100,
   background-image: linear-gradient(-180deg, rgba(255,255,255,0.00) 0%, $b400 3%)
 }
-```
 
+.gershwin {
+  background: $g200;
+  background-image: linear-gradient(-180deg, rgba(255,255,255,0.00) 0%, rgba(216,219,226,0.40) 100%);
+}
+```
+The color scheme is organized by Color, Neutral or Gray and from darkest to lightest.
 
 ![alt text](/images/color.png)
-
-The color scheme is organized by Color, Neutral or Gray and from darkest to lightest.
 
 ## Typography
 
@@ -82,7 +87,7 @@ The color scheme is organized by Color, Neutral or Gray and from darkest to ligh
   $black  : 700;
 ```
 
-Font Weights
+The primary typeface used for OME is Circular. The four font weights are book, medium, bold and black.
 
 # Elements
 
@@ -111,7 +116,7 @@ Font Weights
 **Behaviors:**
 
 * These buttons are used for the most important action on the screen.
-* There is a hover state
+* Hover: background color changes
 
 **Example:**
 
@@ -142,7 +147,7 @@ Font Weights
 **Behaviors:**
 
 * These buttons are used for the second most important action on the screen.
-* There is a hover state
+* Hover: background color changes
 
 **Example:**
 
@@ -226,7 +231,18 @@ Font Weights
 
 ## Button Group
 
-![alt text](/images/elements/continue-and-back.png)
+```scss
+.button-group {
+  margin-top: 60px;
+  margin-bottom: 36px;
+}
+
+.button:first-child {
+  margin-right: 12px;
+}
+```
+
+![alt text](/images/elements/buttongroup.png)
 
 **Behaviors:**
 
@@ -265,7 +281,7 @@ a .has--icon-add {
 
 ```
 
-![alt text](/images/elements/anchor-links.png)
+![alt text](/images/elements/anchorlinks.png)
 
 **Behaviors:**
 
@@ -398,6 +414,7 @@ dropdown {
   line-height: 20px;
   font-weight: $medium;
   color: $g800;
+  margin-bottom: 1px;
 }
 
 .description {
@@ -406,6 +423,7 @@ dropdown {
   font-weight: $book;
   color: $g800;
   opacity: 0.74;
+  margin-bottom: 18px;
 }
 ```
 
@@ -415,6 +433,8 @@ dropdown {
 
 * Labels are used to identify a form group, such as asking for a name
 * Descriptions are used to give the user context for the form group
+* The spacing between the title and description is 1px
+* The spacing after the description and first form element is 18px
 
 **Example:**
 
@@ -475,63 +495,128 @@ dropdown {
 
 ## Header
 
-The header has 64px left/right padding and has a fixed position at the top of the browser window. The logo, titles and help link should be aligned center.
-
-### Logo
-
-Has a width of 104px and is positioned 26px from the top.
-
-### Site Title
-
 ```scss
+.site-title {
   font-size: 24px;
   font-weight: 400;
-```
+}
 
-### Application Title
-
-The application title should reflect the application the user selects.
-
-```scss
+.app-title {
   color: $g100;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-```
+}
 
-### Help Link
-
-```scss
+.looking-for-help {
   color: $white;
   font-weight: 500;
   font-size: 16px;
+}
 ```
 
+![alt text](/images/components/header-writer.png)
+
+**Behavior:**
+
+* The header has 64px left/right padding and has a fixed position at the top of the browser window. The logo, titles and help link should be aligned center.
+* Logo: Has a width of 104px and is positioned 26px from the top.
+* App Title: The application title should reflect the application the user selects.
+* Help Link: Clicking on this displays the Support Panel
 
 ## Footer
 
+```scss
+.footer {
+  padding: 24px;
+  border-top: 1px solid $n300;
+}
+
+.nav {
+  font-weight: $medium;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 24px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.nav-group {
+  margin-bottom: 16px;
+}
+
+.social-icon-background {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+}
+```
+
+![alt text](/images/components/footer.png)
+
+**Behaviors:**
+
+* Footer has 24px paddin with a 1px top border
+* Navigation links are separated by 24px padding
+* There's a 16px margin that separates the navigation and social icons
+* Social Icons: have a size of 32x32
+* Instagram: width of 18px
+* Facebook: width of 8px
+* Twitter: width of 18px
+
 ## Indicators
+
+```scss
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: $n400;
+  margin-bottom: 6px;
+
+  &--current {
+    background: $b400;
+  }
+
+  &--completed {
+    background-color: $b600;
+  }
+}
+
+.section-title {
+  color: $g800;
+
+  &--inactive {
+    color: $n400;
+  }
+}
+```
 
 ![alt text](/images/components/indicator.png)
 
 **Behaviors:**
-* ...
+
+* Indicators are used to show the user where they are currently in the application process and the next steps
+* Indicator circles change color and icon depending on completion of sections.
 
 ## Application Sections
 
-![alt text](/images/elements/formgroup.png)
+![alt text](/images/components/formsection.png)
 
 **Behaviors:**
 
-* A form group is comprised of a label, description and form elements (inputs, dropdowns, etc)
-* The spacing between form elements is 14px
-* The spacing between the description and first form element is 18px
-* The spacing after the form group is 36px on desktop and 24px on mobile
+* A form section is comprised of a label, description, cards and form elements (inputs, dropdowns, etc)
+* The spacing between the form title and first form group is 24px.
+* The spacing between the last form group and button groups is 60px
+* The spacing between the button groups and next form title is 36px
 
 **Sections:**
 
-* Indicators with titles
+* Indicators with section titles
 * Form Groups
 * Button Group - Continue and Back buttons
 
@@ -549,5 +634,74 @@ The application title should reflect the application the user selects.
 **Example:**
 
 * Resident Address in General Section
+
+## Tooltips
+
+![alt text](/images/components/tooltip.png)
+
+**Behaviors:**
+
+* ...
+
+**Example:**
+
+* CVC Tooltip
+* Bank Routing/Account Number Tooltip
+
+## Donation
+
+![alt text](/images/components/donation.png)
+
+**Behaviors:**
+
+* ...
+
+## Payment Summary
+
+![alt text](/images/components/paymentsummary.png)
+
+**Behaviors:**
+
+* ...
+
+## Membership Options
+
+![alt text](/images/components/membershipoptions.png)
+
+**Behaviors:**
+
+* ...
+
+## Direct Deposit
+
+![alt text](/images/components/directdeposit.png)
+
+**Behaviors:**
+
+* ...
+
+## Create Account
+
+![alt text](/images/components/createaccount.png)
+
+**Behaviors:**
+
+* ...
+
+## Required Documents
+
+![alt text](/images/components/requireddocuments.png)
+
+**Behaviors:**
+
+* ...
+
+## Support Panel
+
+![alt text](/images/components/supportpanel.png)
+
+**Behaviors:**
+
+* ...
 
 # Animations
