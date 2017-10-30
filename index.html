@@ -940,13 +940,18 @@
 <ul>
 <li>Resident Address in General Section</li>
 </ul>
-<h2 id='tooltips'>Tooltips</h2>
+<h2 id='tooltips'>Tooltips</h2><pre class="highlight scss tab-scss"><code><span class="nc">.tooltip</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">2px</span> <span class="m">4px</span> <span class="m">0</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">13</span><span class="o">,</span><span class="m">13</span><span class="o">,</span><span class="m">13</span><span class="o">,</span><span class="m">0</span><span class="mi">.40</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
 <p><img src="images/components/tooltip.png" alt="alt text" /></p>
 
 <p><strong>Behaviors:</strong></p>
 
 <ul>
-<li>...</li>
+<li>Tooltips appear when someone hovers or clicks on the tooltip icon (circle with ?)</li>
+<li>Tooltips have 18px padding</li>
 </ul>
 
 <p><strong>Example:</strong></p>
@@ -961,7 +966,8 @@
 <p><strong>Behaviors:</strong></p>
 
 <ul>
-<li>...</li>
+<li>The donation component uses the Floating Card style</li>
+<li>When a user selects the &#39;other&#39; option, the card expands to display the additional fields (donation amount, Required information)</li>
 </ul>
 <h2 id='payment-summary'>Payment Summary</h2>
 <p><img src="images/components/paymentsummary.png" alt="alt text" /></p>
@@ -969,7 +975,7 @@
 <p><strong>Behaviors:</strong></p>
 
 <ul>
-<li>...</li>
+<li>This displays the application fee and donation amounts then displays the sum.</li>
 </ul>
 <h2 id='membership-options'>Membership Options</h2>
 <p><img src="images/components/membershipoptions.png" alt="alt text" /></p>
@@ -977,7 +983,8 @@
 <p><strong>Behaviors:</strong></p>
 
 <ul>
-<li>...</li>
+<li>Three options are presented to the user in the Membership Selection section: Writer, Publisher, Both</li>
+<li>If the user selects publisher or both, a dropdown field appears below where they can select their publisher type</li>
 </ul>
 <h2 id='direct-deposit'>Direct Deposit</h2>
 <p><img src="images/components/directdeposit.png" alt="alt text" /></p>
@@ -985,7 +992,8 @@
 <p><strong>Behaviors:</strong></p>
 
 <ul>
-<li>...</li>
+<li>Direct Deposit component uses the Floating Card styling</li>
+<li>This only displays once the user checks the checkbox</li>
 </ul>
 <h2 id='create-account'>Create Account</h2>
 <p><img src="images/components/createaccount.png" alt="alt text" /></p>
@@ -993,7 +1001,9 @@
 <p><strong>Behaviors:</strong></p>
 
 <ul>
-<li>...</li>
+<li>Users can check if the username they entered in is available. Depending on outcome, a success/unavailable message displays below the input field</li>
+<li>When clicking &#39;check availability&#39;, the text changes to the loading icon</li>
+<li>When a user enters an invalid or non-matching password, an error message displays below the second input for password</li>
 </ul>
 <h2 id='required-documents'>Required Documents</h2>
 <p><img src="images/components/requireddocuments.png" alt="alt text" /></p>
@@ -1001,7 +1011,9 @@
 <p><strong>Behaviors:</strong></p>
 
 <ul>
-<li>...</li>
+<li>Required documents will display the sections (A, B, C, D) that are required depending on the users information</li>
+<li>Users are able to skip this section if they&#39;d like</li>
+<li>If a user clicks on &#39;or add comment&#39;, the button and link are replaced with a textarea for the user to leave a comment</li>
 </ul>
 <h2 id='support-panel'>Support Panel</h2>
 <p><img src="images/components/supportpanel.png" alt="alt text" /></p>
