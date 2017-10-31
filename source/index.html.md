@@ -490,6 +490,9 @@ dropdown {
 * Loading
 * Triangle
 * Upload
+* Instagram
+* Facebook
+* Twitter
 
 # Components
 
@@ -709,6 +712,30 @@ dropdown {
 * Required documents will display the sections (A, B, C, D) that are required depending on the users information
 * Users are able to skip this section if they'd like
 * If a user clicks on 'or add comment', the button and link are replaced with a textarea for the user to leave a comment
+
+## Verify Address
+
+![alt text](/images/components/verifyaddress.png)
+
+**Behaviors:**
+
+* ...
+
+## Verify Date of Birth
+
+![alt text](/images/components/verifydateofbirth.png)
+
+**Behaviors:**
+
+* ...
+
+## Add Address
+
+![alt text](/images/components/addaddress.png)
+
+**Behaviors:**
+
+* ...
 
 ## Support Panel
 
