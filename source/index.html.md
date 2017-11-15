@@ -76,8 +76,12 @@ $b300: #489CEF;
 // Red
 $r300: #cd35335;
 
+// Green
+$g300: #288837;
+
 // Neutral
 $n600: #4a4d56;
+$n500: #85868C;
 $n400: #a9abb6;
 $n300: #d8dbe2;
 $n200: #eef0f5;
@@ -121,6 +125,39 @@ The color scheme is organized by Color, Neutral or Gray and from darkest to ligh
 
 The primary typeface used for OME is Circular. The four font weights are book, medium, bold and black.
 
+## Assets
+
+```
+// Default Credit Card SVG
+<svg width="34px" height="22px" viewBox="0 0 34 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="component/desktop/payment/pay-with-card" transform="translate(-9.000000, -122.000000)">
+            <g id="component/payment/pay-with-card">
+                <g id="input-number" transform="translate(0.000000, 100.000000)">
+                    <g id="fake-cc" transform="translate(9.000000, 22.000000)">
+                        <rect id="card-bg" fill="#CECECE" x="0" y="0" width="34" height="21.4590164" rx="2"></rect>
+                        <g id="group-number-bar" transform="translate(3.000000, 15.000000)" fill="#A7A7A7">
+                            <rect id="number-bar-1" x="1.78e-14" y="0" width="6.13114754" height="1.67213115"></rect>
+                            <rect id="number-bar-2" x="7.13661202" y="0" width="6.13114754" height="1.67213115"></rect>
+                            <rect id="number-bar-3" x="14.273224" y="0" width="6.13114754" height="1.67213115"></rect>
+                            <rect id="number-bar-4" x="21.4098361" y="0" width="6.13114754" height="1.67213115"></rect>
+                        </g>
+                        <rect id="white-box" fill="#FAFAFA" x="3" y="6" width="8" height="5" rx="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+```
+
+* Credit Card SVGs -  https://muffinresearch.co.uk/svg-credit-card-icons/
+* Default Card SVGs - See sample code
+* Country Flag SVGs - http://flag-icon-css.lip.is/
+* Icon SVGs - feathericons.com
+
 # Elements
 
 ## Button - Primary
@@ -145,13 +182,10 @@ The primary typeface used for OME is Circular. The four font weights are book, m
 
 ![alt text](/images/elements/button-primary.png)
 
-**Behaviors:**
+**Behaviors & Examples**
 
 * These buttons are used for the most important action on the screen.
 * Hover: background color changes
-
-**Example:**
-
 * Continue button on each application section
 
 ## Button - Secondary
@@ -176,56 +210,13 @@ The primary typeface used for OME is Circular. The four font weights are book, m
 
 ![alt text](/images/elements/button-secondary.png)
 
-**Behaviors:**
+**Behaviors & Examples**
 
 * These buttons are used for the second most important action on the screen.
 * Hover: background color changes
-
-**Example:**
-
 * Back or Cancel button on each application section
 
 ## Button - Tertiary
-
-```scss
-// Tertiary Button
-.button {  
-  color: $g800;
-  font-size: 15px;
-  font-weight: 400;
-  padding: 14px 24px;
-  text-transform: uppercase;
-  background: #$n200;
-  background-image: linear-gradient(-180deg,
-                    rgba(255,255,255,0.00) 0%,
-                    rgba(216,219,226,0.40) 100%);
-  border: 1px solid $n400;
-  border-radius: 2px;
-
-  &:hover {
-    background: $b500;
-  }
-}
-```
-
-![alt text](/images/elements/button-tertiary.png)
-
-**Behaviors:**
-
-* This button type is used for options within the application
-* There are three states: Default, Hover and Active
-* Default: the button displays in its normal, resting states
-* Hover: the border changes color to a darker gray
-* Active: the button's border and background-gradient changes to blue
-
-
-**Example:**
-
-* User selects billing address
-* User selecting donation amount
-
-
-## Button - Upload
 
 ```scss
 // Upload Button
@@ -245,21 +236,65 @@ The primary typeface used for OME is Circular. The four font weights are book, m
 }
 ```
 
-![alt text](/images/elements/button-upload.png)
+![alt text](/images/elements/buttonupload.png)
 
 **Behaviors:**
 
-* This is the upload button so users can upload documents
-* There are several states: Default, Hover, In Progress, Successful
+* Tertiary buttons are used as the upload button
+* There are several states: Default, Hover, In Progress, Successful, Error
 * Default: the normal resting state
 * Hover: the border changes to a darker gray
-* In Progress: replaces the text with a spinning icons
+* In Progress: replaces the text with a spinning icon
 * Successful: replaces the spinning icon with a checkmark and word 'successful'
+* Error: replace the spinning icon with error text
 
 
 **Example:**
 
 * Upload Document in Tax section
+
+## Button - Option
+
+```scss
+// Tertiary Button
+.button {  
+  color: $g800;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 14px 24px;
+  text-transform: uppercase;
+  background: $n200;
+  background-image: linear-gradient(-180deg,
+                    rgba(255,255,255,0.00) 0%,
+                    rgba(216,219,226,0.40) 100%);
+  border: 1px solid $n400;
+  border-radius: 2px;
+
+  &:hover {
+    background-image: linear-gradient(-180deg,
+                      rgba(255,255,255,0.00) 0%,
+                      rgba(17,120,206,0.04) 100%);
+    border: 1px solid #1178CE;
+    background-color: $g100;
+  }
+}
+```
+
+![alt text](/images/elements/button-tertiary.png)
+
+**Behaviors:**
+
+* This button type is used for options within the application
+* There are three states: Default, Hover and Active
+* Default: the button displays in its normal, resting states
+* Hover: the border changes color to a darker gray
+* Active: the button's border and background-gradient changes to blue
+
+
+**Example:**
+
+* User selects billing address
+* User selecting donation amount
 
 ## Button Group
 
@@ -500,7 +535,7 @@ dropdown {
 **Example:**
 
 * Default: Required documents or account creation Components
-* floating: Donation component
+* Floating: Donation component
 
 ## Icons
 
@@ -548,6 +583,9 @@ dropdown {
   color: $white;
   font-weight: 500;
   font-size: 16px;
+  pading: 12px 24px;
+  border: 2px solid $g100;
+  border-radius: 2px;
 }
 ```
 
@@ -655,7 +693,7 @@ dropdown {
 * Form Groups
 * Button Group - Continue and Back buttons
 
-## From Group
+## Form Group
 
 ![alt text](/images/elements/formgroup.png)
 
@@ -751,7 +789,7 @@ dropdown {
 
 **Behaviors:**
 
-* ...
+* Users must verify address and this modal appears.
 
 ## Verify Date of Birth
 
@@ -759,7 +797,7 @@ dropdown {
 
 **Behaviors:**
 
-* ...
+* Users must verify their date of birth and this modal appears.
 
 ## Add Address
 
@@ -767,7 +805,7 @@ dropdown {
 
 **Behaviors:**
 
-* ...
+* User checks the checkbox and a card appears for the user to input their information and save the address. Once clicking save, the card becomes an option for the user to select.
 
 ## Support Panel
 
@@ -775,6 +813,5 @@ dropdown {
 
 **Behaviors:**
 
-* ...
-
-# Animations
+* This panel has two views: The question view, where it lists all the questions and the answer view, where it lists the answer to the question selected.
+* At the bottom of every answer is a 'was this helpful' questions with the options to select yes or no.
