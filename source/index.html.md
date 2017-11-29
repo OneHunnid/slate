@@ -185,8 +185,8 @@ The primary typeface used for OME is Circular. The four font weights are book, m
 **Behaviors & Examples**
 
 * These buttons are used for the most important action on the screen.
-* Hover: background color changes
-* Continue button on each application section
+* Hover: background color changes to darker blue
+* Example: Continue button on each application section
 
 ## Button - Secondary
 
@@ -203,7 +203,7 @@ The primary typeface used for OME is Circular. The four font weights are book, m
   border-radius: 2px;
 
   &:hover {
-    background: $b500;
+    background: $g200;
   }
 }
 ```
@@ -213,15 +213,15 @@ The primary typeface used for OME is Circular. The four font weights are book, m
 **Behaviors & Examples**
 
 * These buttons are used for the second most important action on the screen.
-* Hover: background color changes
-* Back or Cancel button on each application section
+* Hover: background color changes to slight gray
+* Example: Back or Cancel button on each application section
 
 ## Button - Tertiary
 
 ```scss
 // Upload Button
 .button {  
-  color: $g100;
+  color: $g700;
   background: $n300;
   font-size: 13px;
   font-weight: 600;
@@ -231,7 +231,7 @@ The primary typeface used for OME is Circular. The four font weights are book, m
   border-radius: 2px;
 
   &:hover {
-    background: $b500;
+    border: 1px solid $n400;
   }
 }
 ```
@@ -262,7 +262,6 @@ The primary typeface used for OME is Circular. The four font weights are book, m
   font-size: 15px;
   font-weight: 400;
   padding: 14px 24px;
-  text-transform: uppercase;
   background: $n200;
   background-image: linear-gradient(-180deg,
                     rgba(255,255,255,0.00) 0%,
@@ -289,12 +288,7 @@ The primary typeface used for OME is Circular. The four font weights are book, m
 * Default: the button displays in its normal, resting states
 * Hover: the border changes color to a darker gray
 * Active: the button's border and background-gradient changes to blue
-
-
-**Example:**
-
-* User selects billing address
-* User selecting donation amount
+* Example: user selects billing address
 
 ## Button Group
 
@@ -315,7 +309,7 @@ The primary typeface used for OME is Circular. The four font weights are book, m
 
 * This group with a primary and secondary button is separated by 12px
 * This group is used at the end of each application section
-* Secondary button is first, Primary button is second.
+* Secondary button is first in order, Primary button is second in order.
 
 
 ## Anchor Links
@@ -335,6 +329,10 @@ a {
   }
 }
 
+a::hover {
+  color: $b600;
+}
+
 a .has--icon-add {
   color: $b500;
   font-weight: 500;
@@ -352,15 +350,10 @@ a .has--icon-add {
 
 **Behaviors:**
 
-* Hover: the text, underline and icon change colors
+* Hover: the text, underline and icon change to a darker blue
 * Default: contain a bottom border thats 5px below the baseline
 * Contains Icon: 8px of space between icon and text, no border on hover
-
-
-**Example:**
-
-* Adding an Address in Royalties section
-* Links in the Tax section
+* Examople: Links in tax section and adding a new address in Royalties section
 
 ## Input
 
@@ -400,10 +393,7 @@ input {
 * Hover: the border changes colors to a darker gray
 * Active: the border changes colors to blue
 * Fail: the border changes to red and an error message displays under the input
-
-**Example:**
-
-* User adding their name, address, tax ID, etc
+* Example: User adding their name, address, tax ID, etc
 
 
 ## Dropdown
@@ -438,10 +428,7 @@ dropdown {
 * Hover: the border changes colors to a darker gray
 * Active: the border changes colors to blue and the menu expands showing options
 * Fail: the border changes to red and an error message displays under the input
-
-**Example:**
-
-* Selecting a genre
+* Example: Selecting a genre
 
 ## Checkboxes
 
@@ -453,10 +440,7 @@ dropdown {
 * There are two states: Default and Selected
 * Default: the box only has an outline and the center is white
 * Selected: the box background becomes blue with a white checkmark icon in the center
-
-**Example:**
-
-* Option to enroll in direct deposit
+* Example: Option to enroll in direct deposit
 
 ## Radio Buttons
 
@@ -468,10 +452,7 @@ dropdown {
 * There are two states: Default and Selected
 * Default: the circle only has an outline and the center is white
 * Selected: the circles background becomes blue with a white smaller circle in the middle
-
-**Example:**
-
-* Agree to terms and conditions
+* Example: Agree to terms and conditions
 
 ## Labels & Descriptions
 
@@ -502,10 +483,7 @@ dropdown {
 * Descriptions are used to give the user context for the form group
 * The spacing between the title and description is 1px
 * The spacing after the description and first form element is 18px
-
-**Example:**
-
-* Asking users for their full name in General Section
+* Example: Asking users for their full name in General Section
 
 ## Cards
 
@@ -531,11 +509,8 @@ dropdown {
 * There are two styles: default and Floating
 * Default: used as a way to group content together
 * Floating: used to display secondary actions after a primary action has taken place
-
-**Example:**
-
-* Default: Required documents or account creation Components
-* Floating: Donation component
+* Example Default: Required documents or account creation Components
+* Example Floating: Donation component
 
 ## Icons
 
@@ -711,8 +686,10 @@ dropdown {
 ## Tooltips
 ```scss
 .tooltip {
-  padding: 18px;
+  padding: 12px;
   box-shadow: 0 2px 4px 0 rgba(13,13,13,0.40);
+  background: $g700;
+  border-radius: 6px;
 }
 ````
 
@@ -721,12 +698,8 @@ dropdown {
 **Behaviors:**
 
 * Tooltips appear when someone hovers or clicks on the tooltip icon (circle with ?)
-* Tooltips have 18px padding
-
-**Example:**
-
-* CVC Tooltip
-* Bank Routing/Account Number Tooltip
+* Tooltips have 12px padding and a border radius of 6px
+* Example: CVC Tooltip and Bank Routing/Account Number Tooltip
 
 ## Donation
 
@@ -743,9 +716,53 @@ dropdown {
 
 **Behaviors:**
 
-* This displays the application fee and donation amounts then displays the sum.
+* This displays the application fee and donation amounts
+* The sum is displayed at the bottom
 
 ## Membership Options
+
+```scss
+
+// Header: writer, publisher, both
+font-weight: $medium;
+color: $g700;
+font-size: 16px;
+padding:14px 18px;
+
+// Membership Pricing
+font-weight: $book;
+color: $b600;
+font-size: 48px;
+
+// The $ beside price
+font-size: 16px;
+
+// Application Fee
+font-weight: $bold;
+color: $b600;
+font-size: 12px;
+letter-spacing: 0.6px;
+text-transform: uppercase;
+
+// non-refundable
+font-size: 11px;
+font-weight: $book;
+color: $n500;
+
+// Body Copy
+font-size: 13px;
+line-height: 20px;
+font-weight: $book;
+
+// Requirements
+font-weight: $medium;
+font-size: 13px;
+
+// Requirements List
+line-height: 32px;
+font-size: 13px;
+font-weight: $book;
+```
 
 ![alt text](/images/components/membershipoptions.png)
 
@@ -797,7 +814,7 @@ dropdown {
 
 **Behaviors:**
 
-* Users must verify their date of birth and this modal appears.
+* This modal appears to let users must verify their date of birth
 
 ## Add Address
 
