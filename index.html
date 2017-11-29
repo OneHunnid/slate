@@ -226,6 +226,9 @@
                   <li>
                     <a href="#typography" class="toc-h2 toc-link" data-title="General">Typography</a>
                   </li>
+                  <li>
+                    <a href="#assets" class="toc-h2 toc-link" data-title="General">Assets</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -241,7 +244,7 @@
                     <a href="#button-tertiary" class="toc-h2 toc-link" data-title="Elements">Button - Tertiary</a>
                   </li>
                   <li>
-                    <a href="#button-upload" class="toc-h2 toc-link" data-title="Elements">Button - Upload</a>
+                    <a href="#button-option" class="toc-h2 toc-link" data-title="Elements">Button - Option</a>
                   </li>
                   <li>
                     <a href="#button-group" class="toc-h2 toc-link" data-title="Elements">Button Group</a>
@@ -288,7 +291,7 @@
                     <a href="#application-sections" class="toc-h2 toc-link" data-title="Components">Application Sections</a>
                   </li>
                   <li>
-                    <a href="#from-group" class="toc-h2 toc-link" data-title="Components">From Group</a>
+                    <a href="#form-group" class="toc-h2 toc-link" data-title="Components">Form Group</a>
                   </li>
                   <li>
                     <a href="#tooltips" class="toc-h2 toc-link" data-title="Components">Tooltips</a>
@@ -411,8 +414,12 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <span class="c1">// Red
 </span><span class="nv">$r300</span><span class="p">:</span> <span class="mh">#cd3533</span><span class="m">5</span><span class="p">;</span>
 
+<span class="c1">// Green
+</span><span class="nv">$g300</span><span class="p">:</span> <span class="mh">#288837</span><span class="p">;</span>
+
 <span class="c1">// Neutral
 </span><span class="nv">$n600</span><span class="p">:</span> <span class="mh">#4a4d56</span><span class="p">;</span>
+<span class="nv">$n500</span><span class="p">:</span> <span class="mh">#85868C</span><span class="p">;</span>
 <span class="nv">$n400</span><span class="p">:</span> <span class="mh">#a9abb6</span><span class="p">;</span>
 <span class="nv">$n300</span><span class="p">:</span> <span class="mh">#d8dbe2</span><span class="p">;</span>
 <span class="nv">$n200</span><span class="p">:</span> <span class="mh">#eef0f5</span><span class="p">;</span>
@@ -450,6 +457,36 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
   <span class="nv">$black</span>  <span class="p">:</span> <span class="m">700</span><span class="p">;</span>
 </code></pre>
 <p>The primary typeface used for OME is Circular. The four font weights are book, medium, bold and black.</p>
+<h2 id='assets'>Assets</h2><pre class="highlight plaintext"><code>// Default Credit Card SVG
+&lt;svg width="34px" height="22px" viewBox="0 0 34 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+    &lt;desc&gt;Created with Sketch.&lt;/desc&gt;
+    &lt;defs&gt;&lt;/defs&gt;
+    &lt;g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"&gt;
+        &lt;g id="component/desktop/payment/pay-with-card" transform="translate(-9.000000, -122.000000)"&gt;
+            &lt;g id="component/payment/pay-with-card"&gt;
+                &lt;g id="input-number" transform="translate(0.000000, 100.000000)"&gt;
+                    &lt;g id="fake-cc" transform="translate(9.000000, 22.000000)"&gt;
+                        &lt;rect id="card-bg" fill="#CECECE" x="0" y="0" width="34" height="21.4590164" rx="2"&gt;&lt;/rect&gt;
+                        &lt;g id="group-number-bar" transform="translate(3.000000, 15.000000)" fill="#A7A7A7"&gt;
+                            &lt;rect id="number-bar-1" x="1.78e-14" y="0" width="6.13114754" height="1.67213115"&gt;&lt;/rect&gt;
+                            &lt;rect id="number-bar-2" x="7.13661202" y="0" width="6.13114754" height="1.67213115"&gt;&lt;/rect&gt;
+                            &lt;rect id="number-bar-3" x="14.273224" y="0" width="6.13114754" height="1.67213115"&gt;&lt;/rect&gt;
+                            &lt;rect id="number-bar-4" x="21.4098361" y="0" width="6.13114754" height="1.67213115"&gt;&lt;/rect&gt;
+                        &lt;/g&gt;
+                        &lt;rect id="white-box" fill="#FAFAFA" x="3" y="6" width="8" height="5" rx="1"&gt;&lt;/rect&gt;
+                    &lt;/g&gt;
+                &lt;/g&gt;
+            &lt;/g&gt;
+        &lt;/g&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+</code></pre>
+<ul>
+<li>Credit Card SVGs -  https://muffinresearch.co.uk/svg-credit-card-icons/</li>
+<li>Default Card SVGs - See sample code</li>
+<li>Country Flag SVGs - http://flag-icon-css.lip.is/</li>
+<li>Icon SVGs - feathericons.com</li>
+</ul>
 <h1 id='elements'>Elements</h1><h2 id='button-primary'>Button - Primary</h2><pre class="highlight scss tab-scss"><code><span class="c1">// Primary Button
 </span><span class="nc">.button</span> <span class="p">{</span>  
   <span class="nl">color</span><span class="p">:</span> <span class="nv">$g100</span><span class="p">;</span>
@@ -468,17 +505,12 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 </code></pre>
 <p><img src="images/elements/button-primary.png" alt="alt text" /></p>
 
-<p><strong>Behaviors:</strong></p>
+<p><strong>Behaviors &amp; Examples</strong></p>
 
 <ul>
 <li>These buttons are used for the most important action on the screen.</li>
-<li>Hover: background color changes</li>
-</ul>
-
-<p><strong>Example:</strong></p>
-
-<ul>
-<li>Continue button on each application section</li>
+<li>Hover: background color changes to darker blue</li>
+<li>Example: Continue button on each application section</li>
 </ul>
 <h2 id='button-secondary'>Button - Secondary</h2><pre class="highlight scss tab-scss"><code><span class="c1">// Secondary Button
 </span><span class="nc">.button</span> <span class="p">{</span>  
@@ -492,32 +524,61 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
   <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
 
   <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
-    <span class="nl">background</span><span class="p">:</span> <span class="nv">$b500</span><span class="p">;</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="nv">$g200</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 <p><img src="images/elements/button-secondary.png" alt="alt text" /></p>
 
-<p><strong>Behaviors:</strong></p>
+<p><strong>Behaviors &amp; Examples</strong></p>
 
 <ul>
 <li>These buttons are used for the second most important action on the screen.</li>
-<li>Hover: background color changes</li>
+<li>Hover: background color changes to slight gray</li>
+<li>Example: Back or Cancel button on each application section</li>
+</ul>
+<h2 id='button-tertiary'>Button - Tertiary</h2><pre class="highlight scss tab-scss"><code><span class="c1">// Upload Button
+</span><span class="nc">.button</span> <span class="p">{</span>  
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$g700</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$n300</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">600</span><span class="p">;</span>
+  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">0</span><span class="mi">.4</span><span class="p">;</span>
+  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">12px</span> <span class="m">24px</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$n400</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p><img src="images/elements/buttonupload.png" alt="alt text" /></p>
+
+<p><strong>Behaviors:</strong></p>
+
+<ul>
+<li>Tertiary buttons are used as the upload button</li>
+<li>There are several states: Default, Hover, In Progress, Successful, Error</li>
+<li>Default: the normal resting state</li>
+<li>Hover: the border changes to a darker gray</li>
+<li>In Progress: replaces the text with a spinning icon</li>
+<li>Successful: replaces the spinning icon with a checkmark and word &#39;successful&#39;</li>
+<li>Error: replace the spinning icon with error text</li>
 </ul>
 
 <p><strong>Example:</strong></p>
 
 <ul>
-<li>Back or Cancel button on each application section</li>
+<li>Upload Document in Tax section</li>
 </ul>
-<h2 id='button-tertiary'>Button - Tertiary</h2><pre class="highlight scss tab-scss"><code><span class="c1">// Tertiary Button
+<h2 id='button-option'>Button - Option</h2><pre class="highlight scss tab-scss"><code><span class="c1">// Tertiary Button
 </span><span class="nc">.button</span> <span class="p">{</span>  
   <span class="nl">color</span><span class="p">:</span> <span class="nv">$g800</span><span class="p">;</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
   <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
   <span class="nl">padding</span><span class="p">:</span> <span class="m">14px</span> <span class="m">24px</span><span class="p">;</span>
-  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
-  <span class="nl">background</span><span class="p">:</span> <span class="err">#</span><span class="nv">$n200</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$n200</span><span class="p">;</span>
   <span class="nl">background-image</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="m">-180deg</span><span class="o">,</span>
                     <span class="nf">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">0</span><span class="mi">.00</span><span class="p">)</span> <span class="m">0%</span><span class="o">,</span>
                     <span class="nf">rgba</span><span class="p">(</span><span class="m">216</span><span class="o">,</span><span class="m">219</span><span class="o">,</span><span class="m">226</span><span class="o">,</span><span class="m">0</span><span class="mi">.40</span><span class="p">)</span> <span class="m">100%</span><span class="p">);</span>
@@ -525,7 +586,11 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
   <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
 
   <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
-    <span class="nl">background</span><span class="p">:</span> <span class="nv">$b500</span><span class="p">;</span>
+    <span class="nl">background-image</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="m">-180deg</span><span class="o">,</span>
+                      <span class="nf">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">0</span><span class="mi">.00</span><span class="p">)</span> <span class="m">0%</span><span class="o">,</span>
+                      <span class="nf">rgba</span><span class="p">(</span><span class="m">17</span><span class="o">,</span><span class="m">120</span><span class="o">,</span><span class="m">206</span><span class="o">,</span><span class="m">0</span><span class="mi">.04</span><span class="p">)</span> <span class="m">100%</span><span class="p">);</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="mh">#1178CE</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$g100</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
@@ -539,47 +604,7 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <li>Default: the button displays in its normal, resting states</li>
 <li>Hover: the border changes color to a darker gray</li>
 <li>Active: the button&#39;s border and background-gradient changes to blue</li>
-</ul>
-
-<p><strong>Example:</strong></p>
-
-<ul>
-<li>User selects billing address</li>
-<li>User selecting donation amount</li>
-</ul>
-<h2 id='button-upload'>Button - Upload</h2><pre class="highlight scss tab-scss"><code><span class="c1">// Upload Button
-</span><span class="nc">.button</span> <span class="p">{</span>  
-  <span class="nl">color</span><span class="p">:</span> <span class="nv">$g100</span><span class="p">;</span>
-  <span class="nl">background</span><span class="p">:</span> <span class="nv">$n300</span><span class="p">;</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span>
-  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">600</span><span class="p">;</span>
-  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">0</span><span class="mi">.4</span><span class="p">;</span>
-  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">12px</span> <span class="m">24px</span><span class="p">;</span>
-  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
-
-  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
-    <span class="nl">background</span><span class="p">:</span> <span class="nv">$b500</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-<p><img src="images/elements/button-upload.png" alt="alt text" /></p>
-
-<p><strong>Behaviors:</strong></p>
-
-<ul>
-<li>This is the upload button so users can upload documents</li>
-<li>There are several states: Default, Hover, In Progress, Successful</li>
-<li>Default: the normal resting state</li>
-<li>Hover: the border changes to a darker gray</li>
-<li>In Progress: replaces the text with a spinning icons</li>
-<li>Successful: replaces the spinning icon with a checkmark and word &#39;successful&#39;</li>
-</ul>
-
-<p><strong>Example:</strong></p>
-
-<ul>
-<li>Upload Document in Tax section</li>
+<li>Example: user selects billing address</li>
 </ul>
 <h2 id='button-group'>Button Group</h2><pre class="highlight scss tab-scss"><code><span class="nc">.button-group</span> <span class="p">{</span>
   <span class="nl">margin-top</span><span class="p">:</span> <span class="m">60px</span><span class="p">;</span>
@@ -597,7 +622,7 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <ul>
 <li>This group with a primary and secondary button is separated by 12px</li>
 <li>This group is used at the end of each application section</li>
-<li>Secondary button is first, Primary button is second.</li>
+<li>Secondary button is first in order, Primary button is second in order.</li>
 </ul>
 <h2 id='anchor-links'>Anchor Links</h2><pre class="highlight scss tab-scss"><code><span class="nt">a</span> <span class="p">{</span>
   <span class="nl">color</span><span class="p">:</span> <span class="nv">$b500</span><span class="p">;</span>
@@ -611,6 +636,10 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
     <span class="nl">height</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
     <span class="nl">color</span><span class="p">:</span> <span class="nv">$b500</span><span class="p">;</span>
   <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="na">a</span><span class="p">:</span><span class="o">:</span><span class="n">hover</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$b600</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">a</span> <span class="nc">.has--icon-add</span> <span class="p">{</span>
@@ -630,16 +659,10 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <p><strong>Behaviors:</strong></p>
 
 <ul>
-<li>Hover: the text, underline and icon change colors</li>
+<li>Hover: the text, underline and icon change to a darker blue</li>
 <li>Default: contain a bottom border thats 5px below the baseline</li>
 <li>Contains Icon: 8px of space between icon and text, no border on hover</li>
-</ul>
-
-<p><strong>Example:</strong></p>
-
-<ul>
-<li>Adding an Address in Royalties section</li>
-<li>Links in the Tax section</li>
+<li>Examople: Links in tax section and adding a new address in Royalties section</li>
 </ul>
 <h2 id='input'>Input</h2><pre class="highlight scss tab-scss"><code><span class="nt">input</span> <span class="p">{</span>
   <span class="nl">background</span><span class="p">:</span> <span class="nv">$g100</span><span class="p">;</span>
@@ -676,12 +699,7 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <li>Hover: the border changes colors to a darker gray</li>
 <li>Active: the border changes colors to blue</li>
 <li>Fail: the border changes to red and an error message displays under the input</li>
-</ul>
-
-<p><strong>Example:</strong></p>
-
-<ul>
-<li>User adding their name, address, tax ID, etc</li>
+<li>Example: User adding their name, address, tax ID, etc</li>
 </ul>
 <h2 id='dropdown'>Dropdown</h2><pre class="highlight scss tab-scss"><code><span class="nt">dropdown</span> <span class="p">{</span>
   <span class="nl">background</span><span class="p">:</span> <span class="nv">$g100</span><span class="p">;</span>
@@ -712,12 +730,7 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <li>Hover: the border changes colors to a darker gray</li>
 <li>Active: the border changes colors to blue and the menu expands showing options</li>
 <li>Fail: the border changes to red and an error message displays under the input</li>
-</ul>
-
-<p><strong>Example:</strong></p>
-
-<ul>
-<li>Selecting a genre</li>
+<li>Example: Selecting a genre</li>
 </ul>
 <h2 id='checkboxes'>Checkboxes</h2>
 <p><img src="images/elements/checkbox.png" alt="alt text" /></p>
@@ -729,12 +742,7 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <li>There are two states: Default and Selected</li>
 <li>Default: the box only has an outline and the center is white</li>
 <li>Selected: the box background becomes blue with a white checkmark icon in the center</li>
-</ul>
-
-<p><strong>Example:</strong></p>
-
-<ul>
-<li>Option to enroll in direct deposit</li>
+<li>Example: Option to enroll in direct deposit</li>
 </ul>
 <h2 id='radio-buttons'>Radio Buttons</h2>
 <p><img src="images/elements/radiobutton.png" alt="alt text" /></p>
@@ -746,12 +754,7 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <li>There are two states: Default and Selected</li>
 <li>Default: the circle only has an outline and the center is white</li>
 <li>Selected: the circles background becomes blue with a white smaller circle in the middle</li>
-</ul>
-
-<p><strong>Example:</strong></p>
-
-<ul>
-<li>Agree to terms and conditions</li>
+<li>Example: Agree to terms and conditions</li>
 </ul>
 <h2 id='labels-amp-descriptions'>Labels &amp; Descriptions</h2><pre class="highlight scss tab-scss"><code><span class="nc">.label</span> <span class="p">{</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
@@ -779,12 +782,7 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <li>Descriptions are used to give the user context for the form group</li>
 <li>The spacing between the title and description is 1px</li>
 <li>The spacing after the description and first form element is 18px</li>
-</ul>
-
-<p><strong>Example:</strong></p>
-
-<ul>
-<li>Asking users for their full name in General Section</li>
+<li>Example: Asking users for their full name in General Section</li>
 </ul>
 <h2 id='cards'>Cards</h2><pre class="highlight scss tab-scss"><code><span class="nc">.card</span> <span class="p">{</span>
   <span class="nl">background</span><span class="p">:</span> <span class="nv">$g200</span><span class="p">;</span>
@@ -807,13 +805,8 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <li>There are two styles: default and Floating</li>
 <li>Default: used as a way to group content together</li>
 <li>Floating: used to display secondary actions after a primary action has taken place</li>
-</ul>
-
-<p><strong>Example:</strong></p>
-
-<ul>
-<li>Default: Required documents or account creation Components</li>
-<li>floating: Donation component</li>
+<li>Example Default: Required documents or account creation Components</li>
+<li>Example Floating: Donation component</li>
 </ul>
 <h2 id='icons'>Icons</h2>
 <p><img src="images/elements/icon.png" alt="alt text" /></p>
@@ -858,6 +851,9 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
   <span class="nl">color</span><span class="p">:</span> <span class="nv">$white</span><span class="p">;</span>
   <span class="nl">font-weight</span><span class="p">:</span> <span class="m">500</span><span class="p">;</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+  <span class="na">pading</span><span class="p">:</span> <span class="m">12px</span> <span class="m">24px</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="nv">$g100</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 <p><img src="images/components/header-writer.png" alt="alt text" /></p>
@@ -961,7 +957,7 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <li>Form Groups</li>
 <li>Button Group - Continue and Back buttons</li>
 </ul>
-<h2 id='from-group'>From Group</h2>
+<h2 id='form-group'>Form Group</h2>
 <p><img src="images/elements/formgroup.png" alt="alt text" /></p>
 
 <p><strong>Behaviors:</strong></p>
@@ -979,8 +975,10 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <li>Resident Address in General Section</li>
 </ul>
 <h2 id='tooltips'>Tooltips</h2><pre class="highlight scss tab-scss"><code><span class="nc">.tooltip</span> <span class="p">{</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
   <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">2px</span> <span class="m">4px</span> <span class="m">0</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">13</span><span class="o">,</span><span class="m">13</span><span class="o">,</span><span class="m">13</span><span class="o">,</span><span class="m">0</span><span class="mi">.40</span><span class="p">);</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$g700</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">6px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 <p><img src="images/components/tooltip.png" alt="alt text" /></p>
@@ -989,14 +987,8 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 
 <ul>
 <li>Tooltips appear when someone hovers or clicks on the tooltip icon (circle with ?)</li>
-<li>Tooltips have 18px padding</li>
-</ul>
-
-<p><strong>Example:</strong></p>
-
-<ul>
-<li>CVC Tooltip</li>
-<li>Bank Routing/Account Number Tooltip</li>
+<li>Tooltips have 12px padding and a border radius of 6px</li>
+<li>Example: CVC Tooltip and Bank Routing/Account Number Tooltip</li>
 </ul>
 <h2 id='donation'>Donation</h2>
 <p><img src="images/components/donation.png" alt="alt text" /></p>
@@ -1013,9 +1005,50 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <p><strong>Behaviors:</strong></p>
 
 <ul>
-<li>This displays the application fee and donation amounts then displays the sum.</li>
+<li>This displays the application fee and donation amounts</li>
+<li>The sum is displayed at the bottom</li>
 </ul>
-<h2 id='membership-options'>Membership Options</h2>
+<h2 id='membership-options'>Membership Options</h2><pre class="highlight scss tab-scss"><code>
+<span class="c1">// Header: writer, publisher, both
+</span><span class="nl">font-weight</span><span class="p">:</span> <span class="nv">$medium</span><span class="p">;</span>
+<span class="nl">color</span><span class="p">:</span> <span class="nv">$g700</span><span class="p">;</span>
+<span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+<span class="nl">padding</span><span class="p">:</span><span class="m">14px</span> <span class="m">18px</span><span class="p">;</span>
+
+<span class="c1">// Membership Pricing
+</span><span class="nl">font-weight</span><span class="p">:</span> <span class="nv">$book</span><span class="p">;</span>
+<span class="nl">color</span><span class="p">:</span> <span class="nv">$b600</span><span class="p">;</span>
+<span class="nl">font-size</span><span class="p">:</span> <span class="m">48px</span><span class="p">;</span>
+
+<span class="c1">// The $ beside price
+</span><span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+
+<span class="c1">// Application Fee
+</span><span class="nl">font-weight</span><span class="p">:</span> <span class="nv">$bold</span><span class="p">;</span>
+<span class="nl">color</span><span class="p">:</span> <span class="nv">$b600</span><span class="p">;</span>
+<span class="nl">font-size</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
+<span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">0</span><span class="mi">.6px</span><span class="p">;</span>
+<span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+
+<span class="c1">// non-refundable
+</span><span class="nl">font-size</span><span class="p">:</span> <span class="m">11px</span><span class="p">;</span>
+<span class="nl">font-weight</span><span class="p">:</span> <span class="nv">$book</span><span class="p">;</span>
+<span class="nl">color</span><span class="p">:</span> <span class="nv">$n500</span><span class="p">;</span>
+
+<span class="c1">// Body Copy
+</span><span class="nl">font-size</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span>
+<span class="nl">line-height</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="nl">font-weight</span><span class="p">:</span> <span class="nv">$book</span><span class="p">;</span>
+
+<span class="c1">// Requirements
+</span><span class="nl">font-weight</span><span class="p">:</span> <span class="nv">$medium</span><span class="p">;</span>
+<span class="nl">font-size</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span>
+
+<span class="c1">// Requirements List
+</span><span class="nl">line-height</span><span class="p">:</span> <span class="m">32px</span><span class="p">;</span>
+<span class="nl">font-size</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span>
+<span class="nl">font-weight</span><span class="p">:</span> <span class="nv">$book</span><span class="p">;</span>
+</code></pre>
 <p><img src="images/components/membershipoptions.png" alt="alt text" /></p>
 
 <p><strong>Behaviors:</strong></p>
@@ -1059,7 +1092,7 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <p><strong>Behaviors:</strong></p>
 
 <ul>
-<li>...</li>
+<li>Users must verify address and this modal appears.</li>
 </ul>
 <h2 id='verify-date-of-birth'>Verify Date of Birth</h2>
 <p><img src="images/components/verifydateofbirth.png" alt="alt text" /></p>
@@ -1067,7 +1100,7 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <p><strong>Behaviors:</strong></p>
 
 <ul>
-<li>...</li>
+<li>This modal appears to let users must verify their date of birth</li>
 </ul>
 <h2 id='add-address'>Add Address</h2>
 <p><img src="images/components/addaddress.png" alt="alt text" /></p>
@@ -1075,7 +1108,7 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <p><strong>Behaviors:</strong></p>
 
 <ul>
-<li>...</li>
+<li>User checks the checkbox and a card appears for the user to input their information and save the address. Once clicking save, the card becomes an option for the user to select.</li>
 </ul>
 <h2 id='support-panel'>Support Panel</h2>
 <p><img src="images/components/supportpanel.png" alt="alt text" /></p>
@@ -1083,7 +1116,8 @@ $$$$$$$$/ $$/   $$/ $$/        $$$$$$/  $$/ $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$
 <p><strong>Behaviors:</strong></p>
 
 <ul>
-<li>...</li>
+<li>This panel has two views: The question view, where it lists all the questions and the answer view, where it lists the answer to the question selected.</li>
+<li>At the bottom of every answer is a &#39;was this helpful&#39; questions with the options to select yes or no.</li>
 </ul>
 
       </div>
